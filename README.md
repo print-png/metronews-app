@@ -1,4 +1,4 @@
-# <p align="center">📱 Metro News App</p>
+# <p align="center">MetroNews</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Platform-Android-green?style=for-the-badge&logo=android">
