@@ -13,7 +13,7 @@
 
 ---
 
-## 🖼️ Галерея интерфейса
+## Скриншоты
 <p align="center">
   <img src="screen1.png" width="260" alt="Лента новостей" style="border-radius: 10px; margin: 5px;">
   <img src="screen2.png" width="260" alt="Просмотр статьи" style="border-radius: 10px; margin: 5px;">
