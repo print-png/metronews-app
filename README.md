@@ -23,16 +23,6 @@
 ---
 
 > ### особенности
-> **Нет мусора:** В новостях нет рекламы, ссылок и всякого другого мусора.
+> **Нет мусора:** В новостях нет рекламы, ссылок и всякого другого мусора.                               
 > **Персонализация:** Есть настройка цвета акцента и размера шрифта
-
 ---
-
-## Технический стек
-
-```javascript
-const app = {
-  engine: "Vanilla JS / HTML5 / CSS3",
-  build: "Android Native WebView (Signed Release APK)",
-  features: ["CORS-Proxy Support", "RSS-to-JSON", "LocalStorage Sync"]
-}
