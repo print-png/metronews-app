@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <b>Новости основанные на Hi-news RSS, вдохновлен windows 8.1 и windows phone</b><br>
+  <b>Новости основанные на Hi-news RSS, вдохновлен windows 8.1 и windows phone, крута</b><br>
   
 </p>
 
