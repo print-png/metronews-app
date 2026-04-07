@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>metro news</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: #000;
+            font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+            color: #fff;
+            line-height: 1.2;
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+        .wrapper {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        header {
+            padding: 60px 0 40px 0;
+        }
+
+        .title-wrapper {
+            display: inline-flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        h1 {
+            font-weight: 200;
+            font-size: clamp(42px, 8vw, 96px);
+            text-transform: lowercase;
+            letter-spacing: -3px;
+            line-height: 0.75;
+        }
+
+        .app-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid #333;
+            background-image: url('icon.png');
+            background-size: cover;
+            background-position: center;
+            flex-shrink: 0;
+            margin-top: -8px;
+        }
+
+        .tagline {
+            font-size: clamp(18px, 3vw, 24px);
+            font-weight: 200;
+            color: #888;
+            margin-top: 25px;
+        }
+
+        /* ГРИД ФИЧ */
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2px;
+            margin: 40px 0;
+        }
+
+        .feature-item {
+            background: #000;
+            border-top: 1px solid #222;
+            padding: 40px 20px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .feature-number {
+            font-size: 38px;
+            font-weight: 100;
+            color: #2d89ef;
+        }
+
+        .feature-content h2 { font-weight: 300; font-size: 26px; text-transform: lowercase; }
+        .feature-content p { color: #666; font-size: 15px; margin-top: 5px; }
+
+        /* УВЕЛИЧЕННАЯ ГАЛЕРЕЯ */
+        .gallery-section {
+            padding: 60px 0;
+            border-top: 1px solid #222;
+        }
+
+        .slider-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center; /* Центрируем текст относительно большого слайдера */
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .metro-slider {
+            width: 220px; /* Увеличено для мобилок */
+            flex-shrink: 0;
+            overflow: hidden;
+            border: 1px solid #333;
+            background: #111;
+        }
+
+        @media (min-width: 900px) {
+            .metro-slider { width: 340px; } /* Еще больше на ПК */
+            .features-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        .slides {
+            display: flex;
+            width: 300%;
+            transition: transform 0.3s cubic-bezier(0.1, 0.9, 0.2, 1);
+        }
+
+        .slides img { width: 33.33%; display: block; }
+
+        .nav-dots {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .dot {
+            width: 14px; /* Точки тоже побольше */
+            height: 14px;
+            border: 1px solid #fff;
+            cursor: pointer;
+        }
+
+        .dot.active { background: #2d89ef; border-color: #2d89ef; }
+
+        .cta-area {
+            padding: 60px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn-metro {
+            border: 2px solid #fff;
+            padding: 15px 40px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: 0.15s ease;
+        }
+
+        .btn-metro:hover { background: #fff; color: #000; }
+        .btn-metro svg { fill: currentColor; }
+
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid #222;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <header>
+            <div class="title-wrapper">
+                <h1>metro news</h1>
+                <div class="app-icon"></div>
+            </div>
+            <p class="tagline">новости в стиле metro ui на android</p>
+        </header>
+
+        <section class="features-grid">
+            <div class="feature-item">
+                <div class="feature-number">01</div>
+                <div class="feature-content">
+                    <h2>никакого мусора</h2>
+                    <p>никаких реклам и трекеров. читайте комфортно и анонимно</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-number">02</div>
+                <div class="feature-content">
+                    <h2>дизайн 2013</h2>
+                    <p>дизайн как у windows phone 8.1.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <div class="slider-container">
+                <div class="metro-slider">
+                    <div class="slides" id="slides">
+                        <img src="screen1.png" alt="1">
+                        <img src="screen2.png" alt="2">
+                        <img src="screen3.png" alt="3">
+                    </div>
+                </div>
+
+                <div style="text-align: left; flex-grow: 1;">
+                    <h2 style="font-weight: 200; font-size: clamp(24px, 5vw, 42px); margin-bottom: 15px;">скриншоты</h2>
+                    <p style="color: #888; font-size: 16px; margin-bottom: 20px; line-height: 1.4;">листайте кнопками!</p>
+                    <div class="nav-dots">
+                        <div class="dot active" onclick="goSlide(0)"></div>
+                        <div class="dot" onclick="goSlide(1)"></div>
+                        <div class="dot" onclick="goSlide(2)"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="cta-area">
+            <a href="https://github.com/print-png/metronews-app" class="btn-metro">
+                <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                github
+            </a>
+        </div>
+
+        <footer>
+            <div>metro news 2026</div>
+            <div>built with style</div>
+        </footer>
+    </div>
+
+    <script>
+        function goSlide(index) {
+            const slides = document.getElementById('slides');
+            const dots = document.querySelectorAll('.dot');
+            slides.style.transform = `translateX(-${index * 33.33}%)`;
+            dots.forEach(d => d.classList.remove('active'));
+            dots[index].classList.add('active');
+        }
+    </script>
+</body>
+</html>
